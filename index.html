@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KABK</title>
+    <meta name="KABK" content="Afstudeer pagina voor Kunst academie">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="application">
+    <div id="header">
+        <h1 id="home" v-on:click="navToHome()">KABK</h1>
+        <div id="nav">
+            <div>
+                FB
+            </div>
+            <div>
+                LinkedIn
+            </div>
+            <div v-on:click="navToPeople()">
+                Afstudeerders
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div v-if="page == 'home'">
+            <h2>HOME</h2>
+            {{ message }}
+        </div>
+        <div v-if="page == 'people'">
+            <h2>PEOPLE</h2>
+            {{ message }}
+        </div>
+        <div v-if="page == 'project'">
+            <h2>PROJECT</h2>
+            {{ message }}
+        </div>
+    </div>
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>
