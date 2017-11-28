@@ -3,7 +3,8 @@ var application = new Vue({
     data: {
         page: 'home',
         project: null,
-        projects: []
+        projects: [],
+        people: []
     },
     methods: {
         navToProject: function (project) {
@@ -18,5 +19,12 @@ $.get("https://raw.githubusercontent.com/svanschooten/lltnf/master/data/projects
         application.projects = JSON.parse(data).map(function (project) {
             project.hover = false;
             return project;
+        });
+    });
+
+$.get("https://raw.githubusercontent.com/svanschooten/lltnf/master/data/people.json")
+    .done(function (data) {
+        application.people = JSON.parse(data).map(function (people) {
+            return people;
         });
     });

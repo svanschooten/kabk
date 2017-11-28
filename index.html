@@ -52,6 +52,11 @@
             <div v-if="page == 'people'" key="people" class="page">
                 <div class="content">
                     <h2>PEOPLE</h2>
+                    <div v-for="p in people" v-bind:key="p.id" class="person">
+                        <h2>{{ p.name }}</h2>
+                        <p>{{ p.description }}</p>
+                        <a v-bind:href="p.website" target="_blank">{{ p.website }}</a>
+                    </div>
                 </div>
             </div>
             <div v-if="page == 'project'" key="project" class="page">
