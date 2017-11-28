@@ -13,6 +13,7 @@ html, body {
     line-height: 3em;
     padding-left: 1em;
     padding-right: 1em;
+    z-index: 99;
 }
 
 #header #home {
@@ -30,8 +31,39 @@ html, body {
 }
 
 #main {
-    margin-top: 3em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    padding-top: 3em;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+#main .page {
+    position: absolute;
+    width: 100%;
+}
+
+#main .page .content {
+    max-width: 80%;
+}
+
+.project {
+    width: 25em;
+    height: 25em;
+    overflow: hidden;
+    background-size: contain;
+    background: no-repeat center;
+}
+
+.project-description {
+    background: rgba(177, 177, 177, .75);
+    width: 23em;
+    height: 23em;
+    padding: 1em;
+    overflow: auto;
 }

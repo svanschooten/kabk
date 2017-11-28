@@ -7,12 +7,14 @@
     <link rel="icon" href="/images/logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/transitions.css">
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="application">
     <div id="header">
-        <h1 id="home" v-on:click="navToHome()">LLTNF</h1>
+        <h1 id="home" v-on:click="page = 'home'">LLTNF</h1>
         <div id="nav">
             <div>
                 FB
@@ -20,24 +22,45 @@
             <div>
                 LinkedIn
             </div>
-            <div v-on:click="navToPeople()">
+            <div v-on:click="page = 'people'">
                 Afstudeerders
             </div>
         </div>
     </div>
     <div id="main">
-        <div v-if="page == 'home'">
-            <h2>HOME</h2>
-            {{ message }}
-        </div>
-        <div v-if="page == 'people'">
-            <h2>PEOPLE</h2>
-            {{ message }}
-        </div>
-        <div v-if="page == 'project'">
-            <h2>PROJECT</h2>
-            {{ message }}
-        </div>
+        <transition name="slide">
+            <div v-if="page == 'home'" key="home" class="page">
+                <div class="content">
+                    <h2>HOME</h2>
+                    <transition-group name="fade" tag="span">
+                        <div v-for="p in projects" v-bind:key="p.id">
+                            <div class="project" v-on:click="navToProject(p)"
+                                 v-on:mouseenter="p.hover = true"  v-on:mouseleave="p.hover = false"
+                                 v-bind:style="{ backgroundImage: 'url(' + p.image + ')' }"
+                            >
+                                <transition name="fade">
+                                    <div class="project-description" v-if="p.hover">
+                                        <h3> {{ p.title }} </h3>
+                                        <p> {{ p.description }} </p>
+                                    </div>
+                                </transition>
+                            </div>
+                        </div>
+                    </transition-group>
+                </div>
+            </div>
+            <div v-if="page == 'people'" key="people" class="page">
+                <div class="content">
+                    <h2>PEOPLE</h2>
+                </div>
+            </div>
+            <div v-if="page == 'project'" key="project" class="page">
+                <div class="content">
+                    <h2>PROJECT: {{ project.title }}</h2>
+                    {{ project.text }}
+                </div>
+            </div>
+        </transition>
     </div>
 </div>
 <script src="js/index.js"></script>

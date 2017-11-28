@@ -1,22 +1,22 @@
-var app = new Vue({
+var application = new Vue({
     el: '#application',
     data: {
         page: 'home',
         project: null,
-        message: 'You loaded this page on ' + new Date().toLocaleString()
+        projects: []
     },
     methods: {
-        navToHome: function () {
-            this.page = 'home';
-        },
-        navToPeople: function () {
-            this.page = 'people';
-        },
         navToProject: function (project) {
-            return function () {
-                this.project = project;
-                this.page = 'project';
-            }
+            this.project = project;
+            this.page = 'project';
         }
     }
 });
+
+$.get("https://raw.githubusercontent.com/svanschooten/lltnf/master/data/projects.json")
+    .done(function (data) {
+        application.projects = JSON.parse(data).map(function (project) {
+            project.hover = false;
+            return project;
+        });
+    });
