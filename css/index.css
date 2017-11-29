@@ -32,9 +32,10 @@ html, body {
 }
 
 #main {
-    padding-top: 3em;
+    padding-top: 10em;
     padding-left: 10%;
     padding-right: 10%;
+    margin-bottom: 3em;
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +88,21 @@ html, body {
 
 .people > div {
     width: 40%;
+    padding: 2em;
+}
+
+.person > div {
+    float: left;
+}
+
+.avatar {
+    width: 10em;
     height: 10em;
+    border: 0 solid black;
+    border-radius: 5em;
+    background-size: cover;
+    background: no-repeat center;
+    margin-right: 1em;
 }
 
 .images {

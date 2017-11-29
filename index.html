@@ -56,9 +56,15 @@
             <div v-if="page == 'people'" key="people" class="page">
                 <div class="content people">
                     <div v-for="p in people" v-bind:key="p.id" class="person">
-                        <h2>{{ p.name }}</h2>
-                        <p>{{ p.description }}</p>
-                        <a v-bind:href="p.website" target="_blank">{{ p.website }}</a>
+                        <div class="avatar" v-bind:style="{
+                            backgroundImage: p.image
+                            }"
+                        ></div>
+                        <div>
+                            <h2>{{ p.name }}</h2>
+                            <p>{{ p.description }}</p>
+                            <a v-bind:href="p.website" target="_blank">{{ p.website }}</a>
+                        </div>
                     </div>
                 </div>
             </div>
