@@ -1,5 +1,4 @@
-var imageURI = 'https://github.com/svanschooten/lltnf/raw/master/data/';
-var baseURI = 'https://api.github.com/repos/svanschooten/lltnf/contents/data/';
+var baseURI = 'https://raw.githubusercontent.com/svanschooten/lltnf/master/data/';
 
 var application = new Vue({
     el: '#application',
@@ -7,7 +6,11 @@ var application = new Vue({
         page: 'home',
         project: null,
         projects: [],
-        people: []
+        people: [],
+        error: {
+            projects: "",
+            people: ""
+        }
     },
     methods: {
         navToProject: function (project) {
@@ -17,13 +20,14 @@ var application = new Vue({
     }
 });
 
-$.get(baseURI + "projects.json")
+$.get(baseURI + 'projects.json')
     .done(function (data) {
-        application.projects = JSON.parse(atob(data.content)).map(function (project) {
+        application.error.projects = "";
+        application.projects = JSON.parse(data).map(function (project) {
             project.hover = false;
-            project.image = 'url(' + imageURI + 'images/' + project.image + ')';
+            project.image = 'url(' + baseURI + 'images/' + project.image + ')';
             project.images = project.images.map(function (image) {
-                return imageURI + 'images/' + image;
+                return baseURI + 'images/' + image;
             });
             project.top = (Math.floor(Math.random() * 200) - 100) + 'px';
             project.left = Math.floor(Math.random() * 80) + '%';
@@ -31,7 +35,9 @@ $.get(baseURI + "projects.json")
         });
     })
     .fail(function (xhr, status, error) {
-        if (xhr.responseJSON && xhr.responseJSON.message) alert(xhr.responseJSON.message);
+        if (xhr.responseJSON && xhr.responseJSON.message && xhr.responseJSON.message != application.error.people) {
+            application.error.projects = xhr.responseJSON.message;
+        }
         console.log(xhr);
         console.log(status);
         console.log(error);
@@ -39,13 +45,16 @@ $.get(baseURI + "projects.json")
 
 $.get(baseURI + "people.json")
     .done(function (data) {
-        application.people = JSON.parse(atob(data.content)).map(function (person) {
-            person.image = 'url(' + imageURI + 'images/' + person.image + ')';
+        application.error.people = "";
+        application.people = JSON.parse(data).map(function (person) {
+            person.image = 'url(' + baseURI + 'images/' + person.image + ')';
             return person;
         });
     })
     .fail(function (xhr, status, error) {
-        if (xhr.responseJSON && xhr.responseJSON.message) alert(xhr.responseJSON.message);
+        if (xhr.responseJSON && xhr.responseJSON.message && xhr.responseJSON.message != application.error.projects) {
+            application.error.people = xhr.responseJSON.message;
+        }
         console.log(xhr);
         console.log(status);
         console.log(error);

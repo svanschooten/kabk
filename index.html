@@ -29,6 +29,12 @@
         </div>
     </div>
     <div id="main">
+        <p class="error">
+            {{ error.projects }}
+        </p>
+        <p class="error">
+            {{ error.people }}
+        </p>
         <transition name="slide">
             <div v-if="page == 'home'" key="home" class="page">
                 <div class="content">
