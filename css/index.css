@@ -86,13 +86,22 @@ html, body {
     justify-content: center;
 }
 
-.people > div {
+.person {
     width: 40%;
     padding: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .person > div {
     float: left;
+}
+
+.personal-info {
+    width: calc(100% - 11em);
+    /*max-height: 20em;*/
+    overflow: auto;
 }
 
 .avatar {
@@ -103,6 +112,7 @@ html, body {
     background-size: cover;
     background: no-repeat center;
     margin-right: 1em;
+    vertical-align: center;
 }
 
 .images {

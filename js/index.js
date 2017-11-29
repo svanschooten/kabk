@@ -1,4 +1,5 @@
-var baseURI = 'https://raw.githubusercontent.com/svanschooten/lltnf/master/data/';
+// var baseURI = 'https://raw.githubusercontent.com/svanschooten/lltnf/master/data/';
+var baseURI = 'http://127.0.0.1:8080/data/';
 
 var application = new Vue({
     el: '#application',
@@ -23,7 +24,10 @@ var application = new Vue({
 $.get(baseURI + 'projects.json')
     .done(function (data) {
         application.error.projects = "";
-        application.projects = JSON.parse(data).map(function (project) {
+        try {
+            data = JSON.parse(data);
+        } catch (_) {}
+        application.projects = data.map(function (project) {
             project.hover = false;
             project.image = 'url(' + baseURI + 'images/' + project.image + ')';
             project.images = project.images.map(function (image) {
@@ -46,7 +50,10 @@ $.get(baseURI + 'projects.json')
 $.get(baseURI + "people.json")
     .done(function (data) {
         application.error.people = "";
-        application.people = JSON.parse(data).map(function (person) {
+        try {
+            data = JSON.parse(data);
+        } catch (_) {}
+        application.people = data.map(function (person) {
             person.image = 'url(' + baseURI + 'images/' + person.image + ')';
             return person;
         });

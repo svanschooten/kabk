@@ -3,7 +3,7 @@
     "id": "mslof",
     "name": "Maarten Slof",
     "image": "mslof.jpg",
-    "description": "Een leuke jongen blah blah blah",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed lobortis diam. Pellentesque tempor euismod arcu, vitae varius risus dignissim accumsan. Fusce laoreet lectus ut est ultrices sollicitudin. Duis aliquam fringilla arcu, quis dictum mi dapibus ut. Fusce sed ipsum a lorem faucibus imperdiet sit amet at massa. In nec orci sit amet eros vulputate iaculis eget posuere turpis. Proin tincidunt, libero sed eleifend pellentesque, elit nisl condimentum eros, eget accumsan nunc felis eu mauris. Quisque sed pretium mi. Vestibulum porta, ante a pharetra scelerisque, ante mi varius arcu, sed ultrices urna ipsum a magna.",
     "website": "http://maartenslof.nl/"
   },
   {
@@ -24,7 +24,13 @@
     "id": "mslof4",
     "name": "Maarten Slof",
     "image": "mslof.jpg",
-    "description": "Een leuke jongen blah blah blah",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "mslof5",
+    "name": "Maarten Slof",
+    "image": "mslof.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed lobortis diam. Pellentesque tempor euismod arcu, vitae varius risus dignissim accumsan. Fusce laoreet lectus ut est ultrices sollicitudin. Duis aliquam fringilla arcu, quis dictum mi dapibus ut. Fusce sed ipsum a lorem faucibus imperdiet sit amet at massa. In nec orci sit amet eros vulputate iaculis eget posuere turpis. Proin tincidunt, libero sed eleifend pellentesque, elit nisl condimentum eros, eget accumsan nunc felis eu mauris. Quisque sed pretium mi. Vestibulum porta, ante a pharetra scelerisque, ante mi varius arcu, sed ultrices urna ipsum a magna.",
     "website": "http://maartenslof.nl/"
   }
 ]
