@@ -14,15 +14,15 @@
 <body>
 <div id="application">
     <div id="header">
-        <h1 id="home" v-on:click="page = 'home'">LLTNF</h1>
+        <h1 id="home" class="pointer" v-on:click="page = 'home'">LLTNF</h1>
         <div id="nav">
-            <div>
+            <div class="pointer">
                 FB
             </div>
-            <div>
+            <div class="pointer">
                 LinkedIn
             </div>
-            <div v-on:click="page = 'people'">
+            <div class="pointer" v-on:click="page = 'people'">
                 Afstudeerders
             </div>
         </div>
@@ -31,12 +31,15 @@
         <transition name="slide">
             <div v-if="page == 'home'" key="home" class="page">
                 <div class="content">
-                    <h2>HOME</h2>
                     <transition-group name="fade" tag="span">
                         <div v-for="p in projects" v-bind:key="p.id">
-                            <div class="project" v-on:click="navToProject(p)"
+                            <div class="project pointer" v-on:click="navToProject(p)"
                                  v-on:mouseenter="p.hover = true"  v-on:mouseleave="p.hover = false"
-                                 v-bind:style="{ backgroundImage: 'url(' + p.image + ')' }"
+                                 v-bind:style="{
+                                    backgroundImage: p.image,
+                                    top: p.top,
+                                    left: p.left
+                                    }"
                             >
                                 <transition name="fade">
                                     <div class="project-description" v-if="p.hover">
@@ -51,7 +54,6 @@
             </div>
             <div v-if="page == 'people'" key="people" class="page">
                 <div class="content">
-                    <h2>PEOPLE</h2>
                     <div v-for="p in people" v-bind:key="p.id" class="person">
                         <h2>{{ p.name }}</h2>
                         <p>{{ p.description }}</p>
@@ -61,8 +63,11 @@
             </div>
             <div v-if="page == 'project'" key="project" class="page">
                 <div class="content">
-                    <h2>PROJECT: {{ project.title }}</h2>
-                    {{ project.text }}
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.text }}</p>
+                    <div class="images">
+                        <img v-for="image in project.images" v-bind:key="image" class="image" v-bind:src="image">
+                    </div>
                 </div>
             </div>
         </transition>

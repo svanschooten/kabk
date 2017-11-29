@@ -18,6 +18,9 @@ $.get("https://raw.githubusercontent.com/svanschooten/lltnf/master/data/projects
     .done(function (data) {
         application.projects = JSON.parse(data).map(function (project) {
             project.hover = false;
+            project.image = 'url(' + project.image + ')';
+            project.top = (Math.floor(Math.random() * 200) - 100) + 'px';
+            project.left = Math.floor(Math.random() * 80) + '%';
             return project;
         });
     });

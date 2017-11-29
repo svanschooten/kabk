@@ -23,6 +23,7 @@ html, body {
 
 #header #nav {
     float: right;
+    padding-right: 1em;
 }
 
 #header #nav > div {
@@ -52,16 +53,22 @@ html, body {
     max-width: 80%;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .project {
     width: 25em;
     height: 25em;
     overflow: hidden;
     background-size: contain;
     background: no-repeat center;
+    position: relative;
 }
 
 .project-description {
-    background: rgba(177, 177, 177, .75);
+    background: rgba(0, 0, 0, .65);
+    color: white;
     width: 23em;
     height: 23em;
     padding: 1em;
