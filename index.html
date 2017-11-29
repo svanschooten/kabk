@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/transitions.css">
     <script src="https://unpkg.com/vue"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="application">
@@ -32,28 +33,28 @@
             <div v-if="page == 'home'" key="home" class="page">
                 <div class="content">
                     <transition-group name="fade" tag="span">
-                        <div v-for="p in projects" v-bind:key="p.id">
-                            <div class="project pointer" v-on:click="navToProject(p)"
-                                 v-on:mouseenter="p.hover = true"  v-on:mouseleave="p.hover = false"
-                                 v-bind:style="{
-                                    backgroundImage: p.image,
-                                    top: p.top,
-                                    left: p.left
-                                    }"
-                            >
-                                <transition name="fade">
-                                    <div class="project-description" v-if="p.hover">
-                                        <h3> {{ p.title }} </h3>
-                                        <p> {{ p.description }} </p>
-                                    </div>
-                                </transition>
-                            </div>
+                        <div v-for="p in projects" v-bind:key="p.id"
+                             class="project pointer" v-on:click="navToProject(p)"
+                             v-on:mouseenter="p.hover = true" v-on:mouseleave="p.hover = false"
+                             v-bind:style="{
+                                backgroundImage: p.image,
+                                top: p.top,
+                                left: p.left,
+                                zIndex: p.hover ? 88 : 10
+                                }"
+                        >
+                            <transition name="fade">
+                                <div class="project-description" v-if="p.hover">
+                                    <h3> {{ p.title }} </h3>
+                                    <p> {{ p.description }} </p>
+                                </div>
+                            </transition>
                         </div>
                     </transition-group>
                 </div>
             </div>
             <div v-if="page == 'people'" key="people" class="page">
-                <div class="content">
+                <div class="content people">
                     <div v-for="p in people" v-bind:key="p.id" class="person">
                         <h2>{{ p.name }}</h2>
                         <p>{{ p.description }}</p>
@@ -66,7 +67,7 @@
                     <h2>{{ project.title }}</h2>
                     <p>{{ project.text }}</p>
                     <div class="images">
-                        <img v-for="image in project.images" v-bind:key="image" class="image" v-bind:src="image">
+                        <img v-for="image in project.images" v-bind:key="image" v-bind:src="image"/>
                     </div>
                 </div>
             </div>
