@@ -1,3 +1,5 @@
+var baseURI = 'https://github.com/svanschooten/lltnf/raw/master/data/';
+
 var application = new Vue({
     el: '#application',
     data: {
@@ -14,20 +16,24 @@ var application = new Vue({
     }
 });
 
-$.get("https://raw.githubusercontent.com/svanschooten/lltnf/master/data/projects.json")
+$.get(baseURI + "projects.json")
     .done(function (data) {
         application.projects = JSON.parse(data).map(function (project) {
             project.hover = false;
-            project.image = 'url(' + project.image + ')';
+            project.image = 'url(' + baseURI + 'images/' + project.image + ')';
+            project.images = project.images.map(function (image) {
+                return baseURI + 'images/' + image;
+            });
             project.top = (Math.floor(Math.random() * 200) - 100) + 'px';
             project.left = Math.floor(Math.random() * 80) + '%';
             return project;
         });
     });
 
-$.get("https://raw.githubusercontent.com/svanschooten/lltnf/master/data/people.json")
+$.get(baseURI + "people.json")
     .done(function (data) {
-        application.people = JSON.parse(data).map(function (people) {
-            return people;
+        application.people = JSON.parse(data).map(function (person) {
+            person.image = baseURI + 'images/' + person.image;
+            return person;
         });
     });
