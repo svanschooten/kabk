@@ -132,6 +132,10 @@ html, body {
     height: auto;
 }
 
+.images a img {
+    width: 100%;
+}
+
 .error {
     color: red;
 }
