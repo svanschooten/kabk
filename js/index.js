@@ -1,6 +1,13 @@
 // var baseURI = 'https://raw.githubusercontent.com/svanschooten/lltnf/master/data/';
 var baseURI = 'http://127.0.0.1:8080/data/';
 
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'imageFadeDuration': 300,
+    'fadeDuration': 300
+});
+
 var application = new Vue({
     el: '#application',
     data: {
@@ -32,11 +39,11 @@ $.get(baseURI + 'projects.json')
             project.image = 'url(' + baseURI + 'images/' + project.image + ')';
             project.images = project.images.map(function (image) {
                 return baseURI + 'images/' + image;
-            });
+            }).shuffle();
             project.top = (Math.floor(Math.random() * 200) - 100) + 'px';
             project.left = Math.floor(Math.random() * 80) + '%';
             return project;
-        });
+        }).shuffle();
     })
     .fail(function (xhr, status, error) {
         if (xhr.responseJSON && xhr.responseJSON.message && xhr.responseJSON.message != application.error.people) {

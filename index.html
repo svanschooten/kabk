@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="js/Array.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -79,13 +81,17 @@
                     <h2>{{ project.title }}</h2>
                     <p>{{ project.text }}</p>
                     <div class="images">
-                        <img v-for="image in project.images" v-bind:key="image" v-bind:src="image"/>
+                        <a v-for="image in project.images" v-bind:key="image"
+                           v-bind:href="image" v-bind:data-lightbox="project.id" v-bind:data-title="project.title">
+                            <img v-bind:src="image"/>
+                        </a>
                     </div>
                 </div>
             </div>
         </transition>
     </div>
 </div>
+<script src="js/lightbox.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
