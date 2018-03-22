@@ -16,17 +16,16 @@
 </head>
 <body>
 <div id="application">
-    <div id="header">
+    <div id="header" v-bind:style="{
+                                color: page == 'home' ? 'white' : 'black'
+                                }">
         <h1 id="home" class="pointer" v-on:click="page = 'home'">LLTNF</h1>
         <div id="nav">
-            <div class="pointer">
-                FB
-            </div>
-            <div class="pointer">
-                LinkedIn
-            </div>
             <div class="pointer" v-on:click="page = 'people'">
                 Afstudeerders
+            </div>
+            <div class="pointer" v-on:click="page = 'products'">
+                Merchandise
             </div>
         </div>
     </div>
@@ -45,27 +44,44 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <!--<div class="content">-->
-                    <!--<transition-group name="fade" tag="div">-->
-                        <!--<div v-for="p in projects" v-bind:key="p.id"-->
-                             <!--class="project pointer" v-on:click="navToProject(p)"-->
-                             <!--v-on:mouseenter="p.hover = true" v-on:mouseleave="p.hover = false"-->
-                             <!--v-bind:style="{-->
-                                <!--backgroundImage: p.image,-->
-                                <!--top: p.top,-->
-                                <!--left: p.left,-->
-                                <!--zIndex: p.hover ? 88 : 10-->
-                                <!--}"-->
-                        <!--&gt;-->
-                            <!--<transition name="fade">-->
-                                <!--<div class="project-description" v-if="p.hover">-->
-                                    <!--<h3> {{ p.title }} </h3>-->
-                                    <!--<p> {{ p.description }} </p>-->
-                                <!--</div>-->
-                            <!--</transition>-->
-                        <!--</div>-->
-                    <!--</transition-group>-->
-                <!--</div>-->
+                <p class="home-text" v-html="home.text"></p>
+                <div class="bottom-container">
+                    <div class="donate">
+                        <a href="https://www.voordekunst.nl/projecten/6868-long-live-the-new-flesh" target="_blank"><h1>Doneer nu!</h1></a>
+                    </div>
+                    <a class="image-link-container" href="https://github.com/svanschooten/lltnf" target="_blank">
+                        <img src="images/Github.png" class="image-link">
+                    </a>
+                    <a class="image-link-container" href="https://facebook.com" target="_blank">
+                        <img src="images/Facebook.png" class="image-link">
+                    </a>
+                    <a class="image-link-container" href="https://instagram.com" target="_blank">
+                        <img src="images/Instagram.png" class="image-link">
+                    </a>
+                </div>
+            </div>
+            <div v-if="page == 'products'" key="products" class="page">
+                <div class="content products">
+                    <transition-group name="fade" tag="div">
+                        <div v-for="p in projects" v-bind:key="p.id"
+                             class="project pointer" v-on:click="navToProject(p)"
+                             v-on:mouseenter="p.hover = true" v-on:mouseleave="p.hover = false"
+                             v-bind:style="{
+                                backgroundImage: p.image,
+                                top: p.top,
+                                left: p.left,
+                                zIndex: p.hover ? 88 : 10
+                                }"
+                        >
+                            <transition name="fade">
+                                <div class="project-description" v-if="p.hover">
+                                    <h3> {{ p.title }} </h3>
+                                    <p> {{ p.description }} </p>
+                                </div>
+                            </transition>
+                        </div>
+                    </transition-group>
+                </div>
             </div>
             <div v-if="page == 'people'" key="people" class="page">
                 <div class="content people">

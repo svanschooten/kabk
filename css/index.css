@@ -19,6 +19,41 @@ html, body {
     overflow: hidden;
 }
 
+.bottom-container {
+    margin-bottom: 5em;
+}
+
+.home-text {
+    margin-top: 100vh;
+    margin-bottom: 0;
+    padding: 5em 20em;
+}
+
+.image-link-container {
+    float: right;
+    margin-right: 3em;
+    padding-top: 1em;
+    display: inline-block;
+}
+
+.image-link {
+    width: 4em;
+    height: 4em;
+}
+
+.donate {
+    margin-left: calc((100% - 15em) / 2);
+    width: 15em;
+    text-align: center;
+    padding: 0.5em;
+    border: 0 solid black;
+    border-radius: 5px;
+    background: yellow;
+    margin-bottom: 1em;
+    float: none;
+    display: inline-block;
+}
+
 #header {
     position: absolute;
     top: 0;
@@ -125,7 +160,7 @@ html, body {
     width: 10em;
     height: 10em;
     border: 0 solid black;
-    border-radius: 5em;
+    border-radius: 0.5em;
     background-size: cover;
     background: no-repeat center;
     margin-right: 1em;
