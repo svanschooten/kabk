@@ -15,6 +15,10 @@ var application = new Vue({
         project: null,
         projects: [],
         people: [],
+        home: {
+            video: "",
+            text: ""
+        },
         error: {
             projects: "",
             people: ""
@@ -33,17 +37,17 @@ $.get(baseURI + 'projects.json')
         application.error.projects = "";
         try {
             data = JSON.parse(data);
-        } catch (_) {}
-        application.projects = data.map(function (project) {
-            project.hover = false;
-            project.image = 'url(' + baseURI + 'images/' + project.image + ')';
-            project.images = project.images.map(function (image) {
-                return baseURI + 'images/' + image;
+            application.projects = data.map(function (project) {
+                project.hover = false;
+                project.image = 'url(' + baseURI + 'images/' + project.image + ')';
+                project.images = project.images.map(function (image) {
+                    return baseURI + 'images/' + image;
+                }).shuffle();
+                project.top = (Math.floor(Math.random() * 200) - 100) + 'px';
+                project.left = Math.floor(Math.random() * 80) + '%';
+                return project;
             }).shuffle();
-            project.top = (Math.floor(Math.random() * 200) - 100) + 'px';
-            project.left = Math.floor(Math.random() * 80) + '%';
-            return project;
-        }).shuffle();
+        } catch (_) {}
     })
     .fail(function (xhr, status, error) {
         if (xhr.responseJSON && xhr.responseJSON.message && xhr.responseJSON.message != application.error.people) {
@@ -59,15 +63,34 @@ $.get(baseURI + "people.json")
         application.error.people = "";
         try {
             data = JSON.parse(data);
+            application.people = data.map(function (person) {
+                person.image = 'url(' + baseURI + 'images/' + person.image + ')';
+                return person;
+            });
         } catch (_) {}
-        application.people = data.map(function (person) {
-            person.image = 'url(' + baseURI + 'images/' + person.image + ')';
-            return person;
-        });
     })
     .fail(function (xhr, status, error) {
         if (xhr.responseJSON && xhr.responseJSON.message && xhr.responseJSON.message != application.error.projects) {
             application.error.people = xhr.responseJSON.message;
+        }
+        console.log(xhr);
+        console.log(status);
+        console.log(error);
+    });
+
+
+$.get(baseURI + "home.json")
+    .done(function (data) {
+        application.error.home = "";
+        try {
+            data = JSON.parse(data);
+            data.video = baseURI + "data/" + data.video;
+            application.home = data;
+        } catch (_) {}
+    })
+    .fail(function (xhr, status, error) {
+        if (xhr.responseJSON && xhr.responseJSON.message && xhr.responseJSON.message != application.error.projects) {
+            application.error.home = xhr.responseJSON.message;
         }
         console.log(xhr);
         console.log(status);

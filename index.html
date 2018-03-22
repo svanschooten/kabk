@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>LLTNF</title>
@@ -39,27 +39,33 @@
         </p>
         <transition name="slide">
             <div v-if="page == 'home'" key="home" class="page">
-                <div class="content">
-                    <transition-group name="fade" tag="span">
-                        <div v-for="p in projects" v-bind:key="p.id"
-                             class="project pointer" v-on:click="navToProject(p)"
-                             v-on:mouseenter="p.hover = true" v-on:mouseleave="p.hover = false"
-                             v-bind:style="{
-                                backgroundImage: p.image,
-                                top: p.top,
-                                left: p.left,
-                                zIndex: p.hover ? 88 : 10
-                                }"
-                        >
-                            <transition name="fade">
-                                <div class="project-description" v-if="p.hover">
-                                    <h3> {{ p.title }} </h3>
-                                    <p> {{ p.description }} </p>
-                                </div>
-                            </transition>
-                        </div>
-                    </transition-group>
+                <div class="video-container">
+                    <video id="home-video" autoplay loop>
+                        <source src="data/master.mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
+                <!--<div class="content">-->
+                    <!--<transition-group name="fade" tag="div">-->
+                        <!--<div v-for="p in projects" v-bind:key="p.id"-->
+                             <!--class="project pointer" v-on:click="navToProject(p)"-->
+                             <!--v-on:mouseenter="p.hover = true" v-on:mouseleave="p.hover = false"-->
+                             <!--v-bind:style="{-->
+                                <!--backgroundImage: p.image,-->
+                                <!--top: p.top,-->
+                                <!--left: p.left,-->
+                                <!--zIndex: p.hover ? 88 : 10-->
+                                <!--}"-->
+                        <!--&gt;-->
+                            <!--<transition name="fade">-->
+                                <!--<div class="project-description" v-if="p.hover">-->
+                                    <!--<h3> {{ p.title }} </h3>-->
+                                    <!--<p> {{ p.description }} </p>-->
+                                <!--</div>-->
+                            <!--</transition>-->
+                        <!--</div>-->
+                    <!--</transition-group>-->
+                <!--</div>-->
             </div>
             <div v-if="page == 'people'" key="people" class="page">
                 <div class="content people">
