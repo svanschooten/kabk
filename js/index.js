@@ -1,5 +1,5 @@
-// var baseURI = 'https://raw.githubusercontent.com/svanschooten/lltnf/master/data/';
-var baseURI = 'http://127.0.0.1:8080/data/';
+var baseURI = 'https://raw.githubusercontent.com/svanschooten/lltnf/master/data/';
+// var baseURI = 'http://127.0.0.1:8080/data/';
 
 var application = new Vue({
     el: '#application',
