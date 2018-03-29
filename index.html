@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/transitions.css">
-    <link rel="stylesheet" href="css/lightbox.min.css">
     <script src="js/Array.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -16,25 +15,41 @@
 </head>
 <body>
 <div id="application">
-    <div id="header" v-bind:style="{
-                                color: page == 'home' ? 'white' : 'black'
-                                }">
-        <div id="home" class="pointer" v-on:click="page = 'home'">LLTNF</div>
-        <div id="nav">
+    <div class="header top">
+        <div class="home pointer" v-on:click="page = 'home'">
+            LLTNF
+        </div>
+        <div class="nav">
             <div class="pointer" v-on:click="page = 'people'">
                 Graduates
             </div>
-            <div class="pointer" v-on:click="page = 'products'">
+            <div class="pointer" v-on:click="page = 'merchandise'">
+                Merchandise
+            </div>
+        </div>
+    </div>
+    <div class="header bottom">
+        <div class="home">
+            LLTNF
+        </div>
+        <div class="nav">
+            <div>
+                Graduates
+            </div>
+            <div>
                 Merchandise
             </div>
         </div>
     </div>
     <div id="main">
         <p class="error">
-            {{ error.projects }}
+            {{ error.home }}
         </p>
         <p class="error">
             {{ error.people }}
+        </p>
+        <p class="error">
+            {{ error.merchandise }}
         </p>
         <transition name="slide">
             <div v-if="page == 'home'" key="home" class="page">
@@ -43,53 +58,39 @@
                         <source src="data/master.mp4">
                         Your browser does not support the video tag.
                     </video>
-                </div>
-                <p class="home-text" v-html="home.text"></p>
-                <div class="bottom-container">
-                    <div class="donate">
-                        <a href="https://www.voordekunst.nl/projecten/6868-long-live-the-new-flesh" target="_blank"><h1>Doneer nu!</h1></a>
+                    <p class="home-text" v-html="home.text"></p>
+                    <div class="bottom-container">
+                        <div class="donate">
+                            <a href="https://www.voordekunst.nl/projecten/6868-long-live-the-new-flesh" target="_blank"><h1>Doneer nu!</h1></a>
+                        </div>
+                        <a class="image-link-container" href="https://github.com/svanschooten/lltnf" target="_blank">
+                            <img src="images/Github.png" class="image-link">
+                        </a>
+                        <a class="image-link-container" href="https://facebook.com" target="_blank">
+                            <img src="images/Facebook.png" class="image-link">
+                        </a>
+                        <a class="image-link-container" href="https://instagram.com" target="_blank">
+                            <img src="images/Instagram.png" class="image-link">
+                        </a>
                     </div>
-                    <a class="image-link-container" href="https://github.com/svanschooten/lltnf" target="_blank">
-                        <img src="images/Github.png" class="image-link">
-                    </a>
-                    <a class="image-link-container" href="https://facebook.com" target="_blank">
-                        <img src="images/Facebook.png" class="image-link">
-                    </a>
-                    <a class="image-link-container" href="https://instagram.com" target="_blank">
-                        <img src="images/Instagram.png" class="image-link">
-                    </a>
                 </div>
             </div>
-            <div v-if="page == 'products'" key="products" class="page">
-                <div class="content products">
-                    <transition-group name="fade" tag="div">
-                        <div v-for="p in projects" v-bind:key="p.id"
-                             class="project pointer" v-on:click="navToProject(p)"
-                             v-on:mouseenter="p.hover = true" v-on:mouseleave="p.hover = false"
-                             v-bind:style="{
-                                backgroundImage: p.image,
-                                top: p.top,
-                                left: p.left,
-                                zIndex: p.hover ? 88 : 10
-                                }"
-                        >
-                            <transition name="fade">
-                                <div class="project-description" v-if="p.hover">
-                                    <h3> {{ p.title }} </h3>
-                                    <p> {{ p.description }} </p>
-                                </div>
-                            </transition>
+            <div v-if="page == 'merchandise'" key="merchandise" class="page">
+                <div class="content merchandise">
+                    <div v-for="m in merchandise" v-bind:key="m.id" class="merch">
+                        <img class="merchandise-image" v-bind:src="m.image" />
+                        <div class="merchandise-info">
+                            <h2>{{ m.name }}</h2>
+                            <p>{{ m.description }}</p>
+                            <a v-bind:href="m.link" target="_blank"><p>€{{ m.price }}</p></a>
                         </div>
-                    </transition-group>
+                    </div>
                 </div>
             </div>
             <div v-if="page == 'people'" key="people" class="page">
                 <div class="content people">
                     <div v-for="p in people" v-bind:key="p.id" class="person">
-                        <div class="avatar" v-bind:style="{
-                            backgroundImage: p.image
-                            }"
-                        ></div>
+                        <img class="avatar" v-bind:src="p.image" />
                         <div class="personal-info">
                             <h2>{{ p.name }}</h2>
                             <p>{{ p.description }}</p>
@@ -98,22 +99,9 @@
                     </div>
                 </div>
             </div>
-            <div v-if="page == 'project'" key="project" class="page">
-                <div class="content">
-                    <h2>{{ project.title }}</h2>
-                    <p>{{ project.text }}</p>
-                    <div class="images">
-                        <a v-for="image in project.images" v-bind:key="image"
-                           v-bind:href="image" v-bind:data-lightbox="project.id" v-bind:data-title="project.title">
-                            <img v-bind:src="image"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </transition>
     </div>
 </div>
-<script src="js/lightbox.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
