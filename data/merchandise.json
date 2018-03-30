@@ -2,9 +2,9 @@
   {
     "id": "merch1",
     "link": "https://google.com",
-    "image": "demo-project.png",
-    "name": "henk",
-    "description": "een henk kopje",
-    "price": "12.95"
+    "image": "Tas_RGB.jpg",
+    "name": "Tote Bag",
+    "description": "",
+    "price": "5.00"
   }
 ]
