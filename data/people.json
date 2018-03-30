@@ -1,36 +1,155 @@
 [
   {
-    "id": "Yamilé",
+    "id": "yamile",
     "name": "Yamilé Bueters",
     "image": "mslof.jpg",
     "description": "Melting Chair & Salad Home #Flux #Chairs #Fusion ",
     "website": ""
   },
   {
-    "id": "Petra",
+    "id": "betra",
     "name": "Petra Popangelova",
     "image": "mslof.jpg",
     "description": "Tracing the immaterial - how to preserve time in pictorial and object matter.",
     "website": "http://maartenslof.nl/"
   },
   {
-    "id": "mslof3",
-    "name": "Maarten Slof",
+    "id": "bagdat",
+    "name": "Bağdat Sert",
     "image": "mslof.jpg",
     "description": "Een leuke jongen blah blah blah",
     "website": "http://maartenslof.nl/"
   },
   {
-    "id": "mslof4",
+    "id": "edward",
+    "name": "Edward Slaviero",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "mslof",
     "name": "Maarten Slof",
     "image": "mslof.jpg",
     "website": "http://maartenslof.nl/"
   },
-  {
-    "id": "mslof5",
-    "name": "Maarten Slof",
+    {
+    "id": "manon",
+    "name": "Manon Stoeltie",
     "image": "mslof.jpg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed lobortis diam. Pellentesque tempor euismod arcu, vitae varius risus dignissim accumsan. Fusce laoreet lectus ut est ultrices sollicitudin. Duis aliquam fringilla arcu, quis dictum mi dapibus ut. Fusce sed ipsum a lorem faucibus imperdiet sit amet at massa. In nec orci sit amet eros vulputate iaculis eget posuere turpis. Proin tincidunt, libero sed eleifend pellentesque, elit nisl condimentum eros, eget accumsan nunc felis eu mauris. Quisque sed pretium mi. Vestibulum porta, ante a pharetra scelerisque, ante mi varius arcu, sed ultrices urna ipsum a magna.",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "arjen",
+    "name": "Arjen Witteveen",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "yi",
+    "name": "Yi Zhang",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "rachel",
+    "name": "Rachel Borovská",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "kornelija",
+    "name": "Kornelija Chaleckyte",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "aref",
+    "name": "Aref Dashti",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "charlotte1",
+    "name": "Charlotte de Goey",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "juliette",
+    "name": "Juliëtte Groenendaal",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+    {
+    "id": "anastasia",
+    "name": "Anastasia Izotova",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },  
+  {
+    "id": "ashton",
+    "name": "Ashton Kang",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "chris",
+    "name": "Christian van der Klooster",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "hyun",
+    "name": "Hyunwoo Koo",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "daniel",
+    "name": "Daniël Kuiper",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "eunice",
+    "name": "Eunice Ma",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "konstantin",
+    "name": "Konstantin Maksimov",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "charlotter2",
+    "name": "Charlotte Meijerink",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "sarah",
+    "name": "Sarah Anne Rootert",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "fabienne",
+    "name": "Fabiënne van Steensel",
+    "image": "mslof.jpg",
+    "website": "http://maartenslof.nl/"
+  },
+  {
+    "id": "luuk",
+    "name": "Luuk Wezenberg",
+    "image": "mslof.jpg",
+    "website": "http://www.luukwezenberg.nl/"
+  },
+  {
+    "id": "jackson",
+    "name": "Jackson Zhenga",
+    "image": "mslof.jpg",
     "website": "http://maartenslof.nl/"
   }
 ]
