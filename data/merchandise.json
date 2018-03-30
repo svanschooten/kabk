@@ -6,5 +6,20 @@
     "name": "Tote Bag",
     "description": "",
     "price": "5.00"
-  }
+  },
+   {
+    "id": "merch2",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "Sjaal_RGB.jpg",
+    "name": "Scarf",
+    "description": "",
+    "price": "50.00"
+  },
+   {
+    "id": "merch3",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "cups_RGB.jpg",
+    "name": "Cups",
+    "description": "Two sizes",
+    "price": "8.00 / 14,00"
 ]
