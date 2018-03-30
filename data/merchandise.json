@@ -5,7 +5,7 @@
     "image": "Tas_RGB.jpg",
     "name": "Tote Bag",
     "description": "",
-    "price": "5.00"
+    "price": "€5.00"
   },
    {
     "id": "merch2",
@@ -13,7 +13,7 @@
     "image": "Sjaal_RGB.jpg",
     "name": "Scarf",
     "description": "",
-    "price": "50.00"
+    "price": "€50.00"
   },
    {
     "id": "merch3",
@@ -21,6 +21,6 @@
     "image": "cups_RGB.jpg",
     "name": "Cups",
     "description": "Two sizes",
-    "price": "8.00 / 14,00"
+    "price": "€8.00 / €14,00"
    }
 ]
