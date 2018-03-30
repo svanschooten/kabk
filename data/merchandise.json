@@ -2,7 +2,7 @@
   {
     "id": "merch1",
     "link": "mailto:graduationexpo@gmail.com",
-    "image": "Tas_RGB.jpg",
+    "image": "tas_RGB.jpg",
     "name": "Tote Bag",
     "description": "",
     "price": "5.00"
@@ -10,7 +10,7 @@
    {
     "id": "merch2",
     "link": "mailto:graduationexpo@gmail.com",
-    "image": "Sjaal_RGB.jpg",
+    "image": "sjaal_RGB.jpg",
     "name": "Scarf",
     "description": "",
     "price": "50.00"
