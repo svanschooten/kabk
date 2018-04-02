@@ -1,5 +1,13 @@
 [
   {
+    "id": "Text",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "",
+    "name": "Want to order something?",
+    "description": "Please click the link, and send us an email with what you'd like to buy. Then we'll get back into contact with you. ",
+    "price": "Email us."
+  },
+   {
     "id": "merch1",
     "link": "mailto:graduationexpo@gmail.com",
     "image": "tas_RGB.jpg",
