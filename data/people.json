@@ -3,29 +3,29 @@
     "id": "yamile",
     "name": "Yamilé Bueters",
     "image": "Yamile.jpg",
-    "description": "Melting Chair & Salad Home",
+    "description": "Melting Chairs & Salad Home,  a collection of chairs inspired by the cultural terms ’melting pot’ and ’saladbowl’",
     "website": ""
   },
   {
     "id": "petra",
-    "name": "Petra Popangelova",
+    "name": "Petra ",
     "image": "Petra.jpg",
-    "description": "Tracing the immaterial - how to preserve time in pictorial and object matter.",
-    "website": ""
+    "description": "",
+    "website": "-"
   },
   {
     "id": "bagdat",
     "name": "Bağdat Sert",
     "image": "Bagdat.jpg",
-    "description": "Expressing the pure duration of time through conscious repetitive actions.",
-    "website": ""
+    "description": "Experiencing the pure duration of time through conscious repetitive acts.",
+    "website": "http://bagdatsert.com/"
   },
   {
     "id": "edward",
     "name": "Edward Slaviero",
     "image": "Edward.jpg",
-    "description": "My contribution to creating awareness. A dialogue about plastic’s overabundance and the beauty of a material that is not usually seen as valuable. Designing a contradiction namely the most iconic and valuable furniture piece: a throne made of plastic waste from different dutch beaches.",
-    "website": ""
+    "description": "",
+    "website": "http://cargocollective.com/EDWARDSLAVIERO"
   },
     {
     "id": "mslof",
@@ -36,10 +36,10 @@
   },
     {
     "id": "manon",
-    "name": "Manon Stoeltie",
+    "name": "Manon",
     "image": "Manon.jpg",
-    "description": "Imagine what could happen.",
-    "website": ""
+    "description": "Gesture of attraction, a project that shows the suggestion of movement and will nourish the imagination and arouse curiosity.",
+    "website": "http://manonstoeltie.com/"
   },
     {
     "id": "arjen",
@@ -64,9 +64,9 @@
   },
     {
     "id": "kornelija",
-    "name": "Kornelija Chaleckyte",
+    "name": "Kornelija Chaleckytė",
     "image": "Kornelija.jpg",
-    "description": "What other appearances and passing though routines could a wall have?",
+    "description": "The Wall, a project that physically researches numerous appearances and passing-through routines of crafted walls.",
     "website": ""
   },
     {
@@ -87,15 +87,15 @@
     "id": "juliette",
     "name": "Juliëtte Groenendaal",
     "image": "Juliette.jpg",
-    "description": "Do you see, what I see?",
+    "description": "10 bridges to nowhere",
     "website": ""
   },
     {
     "id": "anastasia",
-    "name": "Anastasia Izotova",
+    "name": "Anastasia",
     "image": "Anastasia.jpg",
-    "description": "How is your inner world would look like?",
-    "website": ""
+    "description": "Are you a real traveller?",
+    "website": "http://izotovanastasia.com/"
   },  
   {
     "id": "ashton",
@@ -106,31 +106,31 @@
   },
   {
     "id": "chris",
-    "name": "Christian van der Klooster",
+    "name": "Christ",
     "image": "Christiaan.jpg",
-    "description": "Photosynthesis systems, in a urben envirement used as architecture.",
-    "website": ""
+    "description": "Use an algae farm as design tool, to recreate a continuous loop.",
+    "website": "https://www.linkedin.com/in/christian-van-der-klooster/"
   },
   {
     "id": "hyun",
-    "name": "Hyunwoo Koo",
+    "name": "Hyun Woo Koo",
     "image": "Hyun.jpg",
     "description": "An oasis for both the nomads and inhabitants.",
     "website": ""
   },
   {
     "id": "daniel",
-    "name": "Daniël Kuiper",
+    "name": "Dann Kuiper",
     "image": "Daniel.jpg",
     "description": "Using the elements that inhabitants use in standerized social housing projects, to create a space that will exclude the individual from the collective.",
-    "website": ""
+    "website": "http://www.studiodnnk.com/"
   },
   {
     "id": "eunice",
-    "name": "Eunice Ma",
+    "name": "Eunice",
     "image": "Eunice.jpg",
-    "description": "The new public: play it like you own it.",
-    "website": ""
+    "description": "The quest to create new cosmos",
+    "website": "https://eunicema.wordpress.com/"
   },
   {
     "id": "konstantin",
@@ -143,22 +143,22 @@
     "id": "charlotteM",
     "name": "Charlotte Meijerink",
     "image": "Charlotte.jpg",
-    "description": "Creating a flexible wooden housing system that can grow and adapt together with the needs of its residents.",
+    "description": "creating flexible houses that can be altered to the needs of it's residents.",
     "website": ""
   },
   {
     "id": "sarah",
     "name": "Sarah Anne Rootert",
     "image": "Sarah.jpg",
-    "description": "Amboina. The culture of Ambon tells its story by vizualizing a pattern. Whether the reinterpretation of marquetry deriving from Art Deco emphasizes its value.",
-    "website": ""
+    "description": "The culture of Ambon tells its story by vizualizing a pattern. Whether the reinterpretation of marquetry deriving from Art Deco emphasizes its value.",
+    "website": "http://saraaahannne.com/"
   },
   {
     "id": "fabienne",
     "name": "Fabienne van Steensel",
     "image": "Fabienne.jpg",
-    "description": "Intimacy, a project that gives the adults an opportunity to experience the physical part of sense of security, through different actions that give a tactile experience.",
-    "website": ""
+    "description": "",
+    "website": "http://faabvansteensel.nl/"
   },
   {
     "id": "luuk",
@@ -169,7 +169,7 @@
   },
   {
     "id": "jackson",
-    "name": "Jackson Zhenga",
+    "name": "Jackson Zhengda",
     "image": "Jackson.jpg",
     "description": "Connecting spirit with nature by physical activity.",
     "website": ""
