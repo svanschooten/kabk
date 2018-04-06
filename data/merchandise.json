@@ -23,4 +23,20 @@
     "description": "small / BIG",
     "price": "8.00 / 14,00"
    }
+      {
+    "id": "merch4",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "cups_RGB.jpg",
+    "name": "Cups",
+    "description": "small / BIG",
+    "price": "8.00 / 14,00"
+   }
+      {
+    "id": "merch5",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "cups_RGB.jpg",
+    "name": "Cups",
+    "description": "small / BIG",
+    "price": "8.00 / 14,00"
+   }
 ]
