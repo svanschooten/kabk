@@ -8,10 +8,10 @@
   },
   {
     "id": "petra",
-    "name": "Petra ",
+    "name": "Petra Popangelova",
     "image": "Petra.jpg",
-    "description": "",
-    "website": "-"
+    "description": "Exploring surface design as a means to identify a space.",
+    "website": ""
   },
   {
     "id": "bagdat",
@@ -38,15 +38,15 @@
     "id": "manon",
     "name": "Manon",
     "image": "Manon.jpg",
-    "description": "Gesture of attraction, a project that shows the suggestion of movement and will nourish the imagination and arouse curiosity.",
-    "website": "http://manonstoeltie.com/"
+    "description": "Gesture of attraction. A project showing the suggestion of movement. It will nourish the imagination and arouse your curiosity.",
+    "website": "https://manonstoeltie.nl/"
   },
     {
     "id": "arjen",
     "name": "Arjen Witteveen",
     "image": "Arjen.jpg",
-    "description": "The nature as a machine.",
-    "website": ""
+    "description": "The nature as a machine. Eroding man made materials with natural processes.",
+    "website": "https://AtelierAW.nl"
   },
     {
     "id": "yi",
@@ -57,10 +57,10 @@
   },
     {
     "id": "rachel",
-    "name": "Rachel Borovská",
+    "name": "Rachel Borovska",
     "image": "Rachel.jpg",
-    "description": "The city as a landscape introduces a path of interventions in the city for us, the distracted. ",
-    "website": ""
+    "description": "A monument for a landscape of morality. Morality is defined as a method of organising things within and around us. In my project I try to walk the audience through the phases of creation and organissation by going back to the very first beginning.",
+    "website": "https://linkedin.com/in/rachel-borovska-45a313157/"
   },
     {
     "id": "kornelija",
@@ -73,29 +73,29 @@
     "id": "aref",
     "name": "Aref Dashti",
     "image": "Aref.jpg",
-    "description": "It is equally Fatal for the mind to have a system and to have none. It will simply have to decide to combine the two.",
-    "website": ""
+    "description": "It is equally fatal for the mind to have a system and to have none. It will simply have to decide to combine the two.",
+    "website": "http://arefdashti.com/"
   },
     {
     "id": "charlotteG",
     "name": "Charlotte de Goey",
     "image": "CharlotteG.jpg",
     "description": "The memories that remain after the festival are the moments you are in awe of your surroundings.",
-    "website": ""
+    "website": "http://charlotte-degoey.squarespace.com"
   },
     {
     "id": "juliette",
     "name": "Juliëtte Groenendaal",
     "image": "Juliette.jpg",
     "description": "10 bridges to nowhere",
-    "website": ""
+    "website": "https://linkedin.com/in/juliëtte-groenendaal-5aaa13b2/"
   },
     {
     "id": "anastasia",
-    "name": "Anastasia",
+    "name": "Anastasia Izotova",
     "image": "Anastasia.jpg",
-    "description": "Are you a real traveller?",
-    "website": "http://izotovanastasia.com/"
+    "description": "Are you a true traveller?",
+    "website": "http://izotovanastasia.com"
   },  
   {
     "id": "ashton",
@@ -106,10 +106,10 @@
   },
   {
     "id": "chris",
-    "name": "Christ",
+    "name": "Christian van der Klooster",
     "image": "Christiaan.jpg",
     "description": "Use an algae farm as design tool, to recreate a continuous loop.",
-    "website": "https://www.linkedin.com/in/christian-van-der-klooster/"
+    "website": "https://linkedin.com/in/christian-van-der-klooster/"
   },
   {
     "id": "hyun",
@@ -123,7 +123,7 @@
     "name": "Dann Kuiper",
     "image": "Daniel.jpg",
     "description": "Using the elements that inhabitants use in standerized social housing projects, to create a space that will exclude the individual from the collective.",
-    "website": "http://www.studiodnnk.com/"
+    "website": "http://studiodnnk.com/"
   },
   {
     "id": "eunice",
@@ -136,8 +136,8 @@
     "id": "konstantin",
     "name": "Konstantin Maksimov",
     "image": "Konstantin.jpg",
-    "description": "",
-    "website": ""
+    "description": "Water as a core of dwelling.",
+    "website": "https://instagram.com/kostya_________________/"
   },
   {
     "id": "charlotteM",
