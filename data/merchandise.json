@@ -21,22 +21,47 @@
     "image": "cups_RGB.jpg",
     "name": "Cups",
     "description": "small / BIG",
-    "price": "8.00 / 14,00"
+    "price": "8.00 / 14.00"
    }
       {
     "id": "merch4",
     "link": "mailto:graduationexpo@gmail.com",
-    "image": "cups_RGB.jpg",
-    "name": "Cups",
-    "description": "small / BIG",
-    "price": "8.00 / 14,00"
+    "image": "tote.jpg",
+    "name": "Tote bag",
+    "description": "",
+    "price": "5.00"
    }
       {
     "id": "merch5",
     "link": "mailto:graduationexpo@gmail.com",
-    "image": "cups_RGB.jpg",
+    "image": "shirt.jpg",
+    "name": "Shirt",
+    "description": "Multiple colored prints",
+    "price": "12.00"
+   }
+      {
+    "id": "merch6",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "sweater.jpg",
+    "name": "Sweater",
+    "description": "Multiple colored prints",
+    "price": "20.00"
+   }
+      {
+    "id": "merch7",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "inbetween.jpg",
+    "name": "INBETWEEN Magazine",
+    "description": "Magazine about architectual interpretations of the theme of INBETWEEN",
+    "price": "8.00 / 14,00"
+   }
+      {
+    "id": "merch8",
+    "link": "mailto:graduationexpo@gmail.com",
+    "image": "allcups.jpg",
     "name": "Cups",
     "description": "small / BIG",
     "price": "8.00 / 14,00"
    }
+   
 ]
