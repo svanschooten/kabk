@@ -7,25 +7,11 @@
     "website": "http://yamilebueters.wixsite.com/portfolio"
   },
   {
-    "id": "petra",
-    "name": "Petra Popangelova",
-    "image": "Petra.jpg",
-    "description": "Exploring surface design as a means to identify a space.",
-    "website": ""
-  },
-  {
     "id": "bagdat",
     "name": "Bağdat Sert",
     "image": "Bagdat.jpg",
     "description": "Experiencing the pure duration of time through conscious repetitive acts.",
     "website": "http://bagdatsert.com/"
-  },
-  {
-    "id": "edward",
-    "name": "Edward Slaviero",
-    "image": "Edward.jpg",
-    "description": "",
-    "website": "http://cargocollective.com/EDWARDSLAVIERO"
   },
     {
     "id": "mslof",
@@ -91,25 +77,11 @@
     "website": "http://izotovanastasia.com"
   },  
   {
-    "id": "ashton",
-    "name": "Ashton Kang",
-    "image": "Ashton.jpg",
-    "description": "What is it of being intuitive.",
-    "website": ""
-  },
-  {
     "id": "chris",
     "name": "Christian van der Klooster",
     "image": "Christiaan.jpg",
     "description": "Use an algae farm as design tool, to recreate a continuous loop.",
     "website": "https://linkedin.com/in/christian-van-der-klooster/"
-  },
-  {
-    "id": "hyun",
-    "name": "Hyun Woo Koo",
-    "image": "Hyun.jpg",
-    "description": "An oasis for both the nomads and inhabitants.",
-    "website": ""
   },
   {
     "id": "daniel",
@@ -160,11 +132,4 @@
     "description": "Headroom, a project that focuses on the fictional spatial experience – approaching and walking through seductive and, at the same time, suppressed volumes.",
     "website": "http://luukwezenberg.nl/"
   },
-  {
-    "id": "jackson",
-    "name": "Jackson Zhengda",
-    "image": "Jackson.jpg",
-    "description": "Connecting spirit with nature by physical activity.",
-    "website": ""
-  }
 ]
